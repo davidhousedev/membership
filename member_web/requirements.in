@@ -1,0 +1,6 @@
+django
+psycopg2
+dj_database_url
+whitenoise
+
+pytest-django

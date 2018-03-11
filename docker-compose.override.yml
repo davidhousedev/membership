@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  web:
+    environment:
+      - "DJANGO_SETTINGS_MODULE=member_web.local"
+    volumes:
+      - ./member_web:/app
+  static:
+    build:
+      context: .
+      dockerfile: Dockerfile-gulp
+    volumes:
+      - ./member_web:/project/web
